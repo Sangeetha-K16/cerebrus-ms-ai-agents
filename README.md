@@ -2,6 +2,10 @@
 
 # CERBERUS - Continuous Ecosystem for Risk & Boundary Evaluation Remediations Using STRIDE/DREAD
 
+## Project Overview
+
+This repository is an individual contribution to the CERBERUS capstone project, focusing on the design and automation of a STRIDE-based threat modeling workflow using n8n. It enables the conversion of plain English system descriptions into Data Flow Diagrams (DFDs), which are then validated and analyzed for security risks using the STRIDE framework. The workflow simulates API integrations for DFD generation (via LangGraph) and security assessment.
+
 # Agentic AI
 Agentic AI refers to artificial intelligence systems designed to act autonomously with the ability to perceive their environment, make decisions, and take goal-directed actions to achieve specific objectives. Unlike reactive AI, agentic AI exhibits agency — meaning it can plan, adapt, and learn from interactions over time. These systems often incorporate multiple AI components working together, enabling complex problem-solving and self-directed behavior. Agentic AI is increasingly applied in areas like robotics, virtual assistants, and automated workflows, pushing the boundaries of intelligent automation.
 
