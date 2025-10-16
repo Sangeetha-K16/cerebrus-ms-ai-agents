@@ -10,4 +10,9 @@ LangGraph, created by LangChain, is an open source AI agent framework designed t
 
 ![CERBERUS Architecture](system_architecture.png)
 
+## API Integration
+
+This workflow interacts with:
+- `POST /generate-dfd` – Simulates LangGraph-based DFD generation
+- `POST /analyze-stride` – Processes validated DFDs to extract STRIDE threats
 
