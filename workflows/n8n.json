@@ -1,0 +1,95 @@
+{
+  "name": "Capstone STRIDE Threat Modeling Workflow",
+  "nodes": [
+    {
+      "name": "Receive User Prompt",
+      "type": "webhook",
+      "parameters": {
+        "path": "user-input",
+        "method": "POST"
+      }
+    },
+    {
+      "name": "LangGraph Agent - Generate DFD",
+      "type": "httpRequest",
+      "parameters": {
+        "url": "https://api.langgraph.com/generate-dfd",
+        "method": "POST",
+        "bodyParameters": {
+          "prompt": "={{$json[\"text\"]}}"
+        }
+      }
+    },
+    {
+      "name": "Validate DFD",
+      "type": "function",
+      "parameters": {
+        "functionCode": "return items.filter(item => item.json.dfd_structure);"
+      }
+    },
+    {
+      "name": "Run STRIDE Assessment",
+      "type": "httpRequest",
+      "parameters": {
+        "url": "https://api.threatmodeler.com/stride",
+        "method": "POST",
+        "bodyParameters": {
+          "dfd": "={{$json[\"dfd\"]}}"
+        }
+      }
+    },
+    {
+      "name": "Return Threat Model",
+      "type": "respondToWebhook",
+      "parameters": {
+        "responseMode": "lastNode"
+      }
+    }
+  ],
+  "connections": {
+    "Receive User Prompt": {
+      "main": [
+        [
+          {
+            "node": "LangGraph Agent - Generate DFD",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LangGraph Agent - Generate DFD": {
+      "main": [
+        [
+          {
+            "node": "Validate DFD",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate DFD": {
+      "main": [
+        [
+          {
+            "node": "Run STRIDE Assessment",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run STRIDE Assessment": {
+      "main": [
+        [
+          {
+            "node": "Return Threat Model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
