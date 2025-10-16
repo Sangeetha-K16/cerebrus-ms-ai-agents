@@ -8,6 +8,6 @@ Agentic AI refers to artificial intelligence systems designed to act autonomousl
 # LangGraph 
 LangGraph, created by LangChain, is an open source AI agent framework designed to build, deploy and manage complex generative AI agent workflows. It provides a set of tools and libraries that enable users to create, run and optimize large language models (LLMs) in a scalable and efficient manner. At its core, LangGraph uses the power of graph-based architectures to model and manage the intricate relationships between various components of an AI agent workflow.
 
-![CERBERUS Architecture]("C:\Users\sanna\Downloads\system_architecture.png")
+![CERBERUS Architecture](system_architecture.png)
 
 
