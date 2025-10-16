@@ -20,3 +20,13 @@ This workflow interacts with:
 - `POST /generate-dfd` – Simulates LangGraph-based DFD generation
 - `POST /analyze-stride` – Processes validated DFDs to extract STRIDE threats
 
+
+## Technologies Used
+
+- **n8n** – Workflow automation
+- **SDFD Agent** – DFD generation from natural language
+- **Threat Assessment Agent** – Threat modeling framework
+- **Markdown** – Documentation
+- **Git & GitHub** – Version control and collaboration
+
+
