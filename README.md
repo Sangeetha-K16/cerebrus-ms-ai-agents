@@ -26,7 +26,7 @@ This workflow interacts with:
 
 ## Technologies Used
 
-- **n8n** – Workflow automation
+- **n8n** – Workflow automation (tried but not implemented in CERBERUS)
 - **SDFD Agent** – DFD generation from natural language
 - **Threat Assessment Agent** – Threat modeling framework
 - **Markdown** – Documentation
