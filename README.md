@@ -15,7 +15,18 @@ Specialized agent for analyzing data flow diagrams and identifying security vuln
 2. Data flow analysis and security boundary assessment
 3. Vulnerability detection and risk evaluation
 4. Security control recommendations
-# Integration: Direct integration with the diagram canvas for real-time analysis
+# Integration: 
+Direct integration with the diagram canvas for real-time analysis
+# 2. Threat Assessment Agent
+# Purpose: 
+Comprehensive threat modeling and risk analysis
+# Capabilities:
+1. STRIDE threat classification
+2. Risk level assessment (Low, Medium, High, Critical)
+3. Impact and likelihood analysis
+4. Mitigation strategy recommendations
+# Integration: 
+Automated threat database population and management
 # LangGraph 
 LangGraph, created by LangChain, is an open source AI agent framework designed to build, deploy and manage complex generative AI agent workflows. It provides a set of tools and libraries that enable users to create, run and optimize large language models (LLMs) in a scalable and efficient manner. At its core, LangGraph uses the power of graph-based architectures to model and manage the intricate relationships between various components of an AI agent workflow.
 # System Architecture
